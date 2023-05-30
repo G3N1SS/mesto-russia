@@ -1,4 +1,4 @@
-.popup__box{
+.popup__box {
     position: relative;
     max-width: 430px;
     min-height: 330px;
@@ -6,8 +6,8 @@
     border-radius: 10px;
 }
 
-@media screen and (max-width:655px){
-    .popup__box{
+@media screen and (max-width:655px) {
+    .popup__box {
         max-width: 282px;
         min-height: 322px;
     }

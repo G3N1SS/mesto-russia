@@ -1,4 +1,4 @@
-.popup__close{
+.popup__close {
     position: absolute;
     border: none;
     background-color: rgba(0, 0, 0, 0);
@@ -8,8 +8,8 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:655px){
-    .popup__close{
+@media screen and (max-width:655px) {
+    .popup__close {
         max-width: 20px;
         top: -36px;
         right: 0;

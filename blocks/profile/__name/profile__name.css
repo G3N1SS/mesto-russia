@@ -1,4 +1,4 @@
-.profile__name{
+.profile__name {
     display: inline-block;
     margin: 25px 0 0;
     font-style: normal;
@@ -9,8 +9,8 @@
     max-height: 39px;
 }
 
-@media screen and (max-width:655px){
-    .profile__name{
+@media screen and (max-width:655px) {
+    .profile__name {
         font-size: 27px;
         line-height: 33px;
         margin: 22px 0 0 0;

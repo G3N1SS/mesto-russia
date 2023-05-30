@@ -1,4 +1,4 @@
-document.querySelector(".profile__info_edit-button").addEventListener("click",function(){
+document.querySelector(".profile__edit-button").addEventListener("click",function(){
     document.getElementById("popup-page").classList.add("popup_opened")
 })
 
@@ -24,8 +24,8 @@ document.getElementById("popup-page").addEventListener("click", event => {
     event.currentTarget.classList.remove("popup_opened");
 })
 
-let firstName = document.querySelector(".profile__info_name");
-let job = document.querySelector(".profile__info_rank");
+let firstName = document.querySelector(".profile__name");
+let job = document.querySelector(".profile__job");
 
 document.querySelector('.popup__name').defaultValue = firstName.textContent;
 document.querySelector('.popup__job').defaultValue = job.textContent;

@@ -1,4 +1,4 @@
-.profile__info_rank{
+.profile__job{
     margin: 16px 0 0 0;
     max-width: max-content;
     max-height: 18px;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width:655px){
-    .profile__info_rank{
+    .profile__job{
         margin: 14px auto 0 auto;
         font-size: 14px;
         line-height: 17px;

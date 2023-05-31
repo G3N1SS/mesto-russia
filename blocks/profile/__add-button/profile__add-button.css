@@ -1,9 +1,10 @@
 .profile__add-button {
     background-color: #000000;
     border: 2px solid #ffffff;
-    max-width: 150px;
-    min-height: 50px;
-    padding: 14px 73px;
+    border-radius: 2px;
+    width: 150px;
+    height: 50px;
+    padding: 0;
     background-image: url(../../../images/plus.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -18,7 +19,6 @@
 @media screen and (max-width:655px) {
     .profile__add-button {
         margin: 36px 19px 0 19px;
-        max-width: 282px;
-        padding: 17px 139px;
+        width: 282px;
     }
 }

@@ -1,43 +1,30 @@
-document.querySelector(".profile__edit-button").addEventListener("click",function(){
-    document.getElementById("popup-page").classList.add("popup_opened")
-})
+const popup = document.querySelector(".popup")
+const profileEditButton = document.querySelector(".profile__edit-button");
+const popupClose = popup.querySelector(".popup__close");
+const popupSave = popup.querySelector(".popup__save")
+const firstName = document.querySelector(".profile__name");
+const job = document.querySelector(".profile__job");
+const formElement = popup.querySelector('.popup__form');
+const nameInput = popup.querySelector('.popup__input_name');
+const jobInput = popup.querySelector('.popup__input_job');
 
-document.querySelector(".popup__close").addEventListener("click",function(){
-    document.getElementById("popup-page").classList.remove("popup_opened")
-})
-
-document.querySelector(".popup__save").addEventListener("click",function(){
-    document.getElementById("popup-page").classList.remove("popup_opened")
-})
-
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        document.getElementById("popup-page").classList.remove("popup_opened")
-    }
+profileEditButton.addEventListener("click",function(){
+    popup.classList.add("popup_opened")
 });
 
-document.querySelector(".popup .popup__box").addEventListener("click", event => {
-    event._isClickWithInPopup = true;
+popupClose.addEventListener("click",function(){
+    popup.classList.remove("popup_opened")
 });
-document.getElementById("popup-page").addEventListener("click", event => {
-    if (event._isClickWithInPopup) return;
-    event.currentTarget.classList.remove("popup_opened");
-})
 
-let firstName = document.querySelector(".profile__name");
-let job = document.querySelector(".profile__job");
-
-document.querySelector('.popup__name').defaultValue = firstName.textContent;
-document.querySelector('.popup__job').defaultValue = job.textContent;
-
-let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__name');
-let jobInput = document.querySelector('.popup__job');
+nameInput.value = firstName.textContent;
+jobInput.value = job.textContent;
 
 function handleFormSubmit(evt) {
     evt.preventDefault();
     firstName.textContent = nameInput.value;
-    job.textContent = jobInput.value;
+    job.textContent = jobInput.value;   
 }
 formElement.addEventListener('submit', handleFormSubmit);
-
+popupSave.addEventListener("click",function(){
+    popup.classList.remove("popup_opened")
+}); 

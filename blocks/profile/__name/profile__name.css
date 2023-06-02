@@ -10,6 +10,8 @@
     white-space: nowrap;
     overflow: hidden;
     grid-area: name;
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (max-width:800px) {
@@ -17,7 +19,6 @@
         font-size: 27px;
         line-height: 33px;
         margin: 0;
-        max-width: 328px;
     }
 }
 

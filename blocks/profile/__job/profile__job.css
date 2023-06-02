@@ -1,6 +1,6 @@
 .profile__job {
     margin: 0;
-    max-width: max-content;
+    width: 100%;
     font-style: normal;
     font-size: 18px;
     font-weight: 400;
@@ -22,6 +22,7 @@
 
 @media screen and (max-width:655px) {
     .profile__job {
-        margin: 14px auto 0 auto;
+        margin: 14px 0 0 0;
+        text-align: center;
     }
 }

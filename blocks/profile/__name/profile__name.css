@@ -10,20 +10,27 @@
     white-space: nowrap;
     overflow: hidden;
     grid-area: name;
-    width: 100%;
+    max-width: 450px;
     text-align: center;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:815px) {
     .profile__name {
         font-size: 27px;
         line-height: 33px;
         margin: 0;
+        max-width: 300px;
     }
 }
 
-@media screen and (max-width:655px) {
+@media screen and (max-width:675px) {
     .profile__name {
         margin: 22px 0 0 0;
+    }
+}
+
+@media screen and (max-width:375px){
+    .profile__name{
+        max-width: 250px;
     }
 }

@@ -8,11 +8,10 @@ const formElement = popup.querySelector('.popup__form');
 const nameInput = popup.querySelector('.popup__input_type_name');
 const jobInput = popup.querySelector('.popup__input_type_job');
 
-nameInput.value = firstName.textContent;
-jobInput.value = job.textContent;
-
 function popupOpen(){
-    popup.classList.add("popup_opened")
+    popup.classList.add("popup_opened");
+    nameInput.value = firstName.textContent;
+    jobInput.value = job.textContent;
 };
 
 profileEditButton.addEventListener ("click", popupOpen);

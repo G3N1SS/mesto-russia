@@ -26,3 +26,9 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width:375px){
+    .profile__name{
+        max-width: 250px;
+    }
+}

@@ -27,67 +27,57 @@
         </div>
         </section>
         <section class="elements">
-          <ul class="elements__cards">
-            <li class="elements__card">
-              <img class="elements__image" alt="Карачевск" src="./images/element-1.png">
-              <div class="elements__banner">
-                <h2 class="elements__name">Карачаевск</h2>
-                <button class="elements__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img class="elements__image" alt="Гора Эльбрус" src="./images/element-2.png">
-              <div class="elements__banner">
-                <h2 class="elements__name">Гора Эльбрус</h2>
-                <button class="elements__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img class="elements__image" alt="Домбай" src="./images/element-3.png">
-              <div class="elements__banner">
-                <h2 class="elements__name">Домбай</h2>
-                <button class="elements__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img class="elements__image" alt="Гора Эльбрус" src="./images/element-4.png">
-              <div class="elements__banner">
-                <h2 class="elements__name">Гора Эльбрус</h2>
-                <button class="elements__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img class="elements__image" alt="Домбай" src="./images/element-5.png">
-              <div class="elements__banner">
-                <h2 class="elements__name">Домбай</h2>
-                <button class="elements__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img class="elements__image" alt="Карачевск" src="./images/element-6.png">
-              <div class="elements__banner">
-                <h2 class="elements__name">Карачаево-Черкасия</h2>
-                <button class="elements__like-button" href="#"></button>
-              </div>
-            </li>
-          </ul>
+          <div class="popup_pictures">
+            <div class="element"></div>
+          </div>
+
         </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
       </footer>
-      <div class="popup" id="popup-page">
+      <div class="popup popupProfile" id="popup-page">
         <div class="popup__box">
-          <button class="popup__close" type="button"></button>
+          <button class="popup__close popup__close_profile" type="button"></button>
           <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form" name="popup">
+          <form class="popup__form popup__form_profile" name="popup">
             <input class="popup__input popup__input_type_name" type="text" name="inputName">
             <input class="popup__input popup__input_type_job" type="text" name="inputJob">
             <button class="popup__save" type="submit">Сохранить</button>
           </form>
         </div>
       </div>
+      <div class="popup popupAdd" id="popup-page">
+        <div class="popup__box">
+          <button class="popup__close popup__close_add" type="button"></button>
+          <h2 class="popup__title">Новое место</h2>
+          <form class="popup__form popup__form_add" name="popup">
+            <input class="popup__input popup__input_type_place" type="text" name="inputPlace" placeholder="Название">
+            <input class="popup__input popup__input_type_image" type="text" name="inputImage" placeholder="Ссылка на картинку">
+            <button class="popup__save" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup popupImages" id="popup-page">
+        <div class="popup__image-box">
+          <button class="popup__close popup__close_image"></button>
+          <img class="popup__image" alt="" src="">
+          <p class="popup__caption"></p>
+        </div>
+      </div>
     </div>
+    <template class="element-template">
+      <article class="elements__cards">
+        <div class="elements__card">
+          <!-- <button class="elements__image-button">--><img class="elements__image" alt="" src=""><!--</button> -->
+          <button class="elements__delete-button"></button>
+          <div class="elements__banner">
+            <h2 class="elements__name"></h2>
+            <button class="elements__like-button" type="button"></button>
+          </div>
+        </div>
+      </article>
+    </template>
   <script defer src="./script/index.js"></script>
 </body>
 

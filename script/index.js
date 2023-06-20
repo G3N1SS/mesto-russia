@@ -51,9 +51,9 @@ const initialCards = [
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
-]; 
+];
 
-function popupProfileOpen(){
+function popupProfileOpen() {
   popupProfile.classList.add("popup_opened");
   nameInput.value = firstName.textContent;
   jobInput.value = job.textContent;
@@ -61,29 +61,29 @@ function popupProfileOpen(){
 
 profileEditButton.addEventListener("click", popupProfileOpen);
 
-function popupAddOpen(){
+function popupAddOpen() {
   popupAdd.classList.add("popup_opened");
 };
 
 cardAddButton.addEventListener("click", popupAddOpen);
 
-function popupClosedProfile(){
+function popupClosedProfile() {
   popupProfile.classList.remove("popup_opened");
 }
 
 popupCloseProfile.addEventListener("click", popupClosedProfile);
 
-function popupClosedAdd(){
+function popupClosedAdd() {
   popupAdd.classList.remove("popup_opened")
 };
 
 popupCloseAdd.addEventListener("click", popupClosedAdd);
 
-function popupImagesOpen(){
+function popupImagesOpen() {
   popupImages.classList.add("popup_opened");
 };
 
-function popupClosedImage(){
+function popupClosedImage() {
   popupImages.classList.remove("popup_opened");
 };
 
@@ -117,7 +117,7 @@ function handleFormSubmitCard(evt) {
 };
 formElementAdd.addEventListener('submit', handleFormSubmitCard);
 
-const createCard = ({name,link}) => {
+const createCard = ({ name, link }) => {
   const newCard = cardTemplate.querySelector(".elements__cards").cloneNode(true);
   const cardImage = newCard.querySelector('.elements__image');
   const cardDelete = newCard.querySelector(".elements__delete-button");
@@ -128,7 +128,7 @@ const createCard = ({name,link}) => {
   cardImage.alt = name;
   cardName.textContent = name;
 
-  cardDelete.addEventListener("click", function(){
+  cardDelete.addEventListener("click", function () {
     newCard.remove();
   });
 
@@ -136,7 +136,7 @@ const createCard = ({name,link}) => {
     cardLike.classList.toggle("elements__like-button_active");
   });
 
-  cardImage.addEventListener("click", function() {
+  cardImage.addEventListener("click", function () {
     popupImage.src = link;
     popupImage.alt = name;
     popupCaption.textContent = name;
@@ -150,7 +150,7 @@ function render() {
   initialCards.forEach(renderCard);
 };
 
-function renderCard(data) { 
+function renderCard(data) {
   const placeElement = createCard(data);
   placesContainer.prepend(placeElement);
 };

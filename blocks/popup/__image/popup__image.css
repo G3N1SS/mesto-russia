@@ -1,27 +1,27 @@
-.popup__image{
+.popup__image {
     max-height: 540px;
 }
 
-@media screen and (max-width:900px){
-    .popup__image{
+@media screen and (max-width:900px) {
+    .popup__image {
         max-width: 700px;
     }
 }
 
-@media screen and (max-width:800px){
-    .popup__image{
+@media screen and (max-width:800px) {
+    .popup__image {
         max-width: 600px;
     }
 }
 
-@media screen and (max-width:700px){
-    .popup__image{
+@media screen and (max-width:700px) {
+    .popup__image {
         max-width: 500px;
     }
 }
 
-@media screen and (max-width:600px){
-    .popup__image{
+@media screen and (max-width:600px) {
+    .popup__image {
         max-width: 299px;
     }
 }

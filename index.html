@@ -25,59 +25,60 @@
           </div>
           <button class="profile__add-button" type="button"></button>
         </div>
-        </section>
-        <section class="elements">
-          <div class="popup_pictures">
-            <div class="element"></div>
-          </div>
+      </section>
+      <section class="elements">
+        <div class="popup_pictures">
+          <div class="element"></div>
+        </div>
 
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
-      </footer>
-      <div class="popup popupProfile" id="popup-page">
-        <div class="popup__box">
-          <button class="popup__close popup__close_profile" type="button"></button>
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form popup__form_profile" name="popup">
-            <input class="popup__input popup__input_type_name" type="text" name="inputName">
-            <input class="popup__input popup__input_type_job" type="text" name="inputJob">
-            <button class="popup__save" type="submit">Сохранить</button>
-          </form>
-        </div>
-      </div>
-      <div class="popup popupAdd" id="popup-page">
-        <div class="popup__box">
-          <button class="popup__close popup__close_add" type="button"></button>
-          <h2 class="popup__title">Новое место</h2>
-          <form class="popup__form popup__form_add" name="popup">
-            <input class="popup__input popup__input_type_place" type="text" name="inputPlace" placeholder="Название">
-            <input class="popup__input popup__input_type_image" type="text" name="inputImage" placeholder="Ссылка на картинку">
-            <button class="popup__save" type="submit">Сохранить</button>
-          </form>
-        </div>
-      </div>
-      <div class="popup popupImages" id="popup-page">
-        <div class="popup__image-box">
-          <button class="popup__close popup__close_image"></button>
-          <img class="popup__image" alt="" src="">
-          <p class="popup__caption"></p>
-        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
+    </footer>
+    <div class="popup popupProfile">
+      <div class="popup__box">
+        <button class="popup__close popup__close_profile" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form popup__form_profile" name="popup">
+          <input class="popup__input popup__input_type_name" type="text" name="inputName">
+          <input class="popup__input popup__input_type_job" type="text" name="inputJob">
+          <button class="popup__save" type="submit">Сохранить</button>
+        </form>
       </div>
     </div>
-    <template class="element-template">
-      <article class="elements__cards">
-        <div class="elements__card">
-          <!-- <button class="elements__image-button">--><img class="elements__image" alt="" src=""><!--</button> -->
-          <button class="elements__delete-button"></button>
-          <div class="elements__banner">
-            <h2 class="elements__name"></h2>
-            <button class="elements__like-button" type="button"></button>
-          </div>
+    <div class="popup popupAdd">
+      <div class="popup__box">
+        <button class="popup__close popup__close_add" type="button"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form popup__form_add" name="popup">
+          <input class="popup__input popup__input_type_place" type="text" name="inputPlace" placeholder="Название">
+          <input class="popup__input popup__input_type_image" type="text" name="inputImage"
+            placeholder="Ссылка на картинку">
+          <button class="popup__save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popupImages">
+      <div class="popup__image-box">
+        <button class="popup__close popup__close_image"></button>
+        <img class="popup__image" alt="" src=".">
+        <p class="popup__caption"></p>
+      </div>
+    </div>
+  </div>
+  <template class="element-template">
+    <article class="elements__cards">
+      <div class="elements__card">
+        <img class="elements__image" alt="" src=".">
+        <button class="elements__delete-button"></button>
+        <div class="elements__banner">
+          <h2 class="elements__name"></h2>
+          <button class="elements__like-button" type="button"></button>
         </div>
-      </article>
-    </template>
+      </div>
+    </article>
+  </template>
   <script defer src="./script/index.js"></script>
 </body>
 

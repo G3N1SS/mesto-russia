@@ -84,13 +84,13 @@ const createCard = ({ name, link }) => {
 
 //функции
 
-function popupProfileOpen() {
+function handleProfileEditButtonClick() {
   openPopup(popupProfile);
   nameInput.value = firstName.textContent;
   jobInput.value = job.textContent;
 };
 
-function popupAddOpen() {
+function handleCardAddButtonClick() {
   openPopup(popupAdd);
 };
 
@@ -102,15 +102,15 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 };
 
-function popupClosedProfile() {
+function handleProfileEditCloseButtonClick() {
   closePopup(popupProfile);
 }
 
-function popupClosedAdd() {
+function handleCardAddCloseButtonClick() {
   closePopup(popupAdd);
 };
 
-function popupClosedImage() {
+function handleImageCloseButtonClick() {
   closePopup(popupImages);
 };
 
@@ -150,15 +150,15 @@ function renderCard(data) {
 
 //слушатели/обработчики
 
-profileEditButton.addEventListener("click", popupProfileOpen);
+profileEditButton.addEventListener("click", handleProfileEditButtonClick);
 
-cardAddButton.addEventListener("click", popupAddOpen);
+cardAddButton.addEventListener("click", handleCardAddButtonClick);
 
-popupCloseProfile.addEventListener("click", popupClosedProfile);
+popupCloseProfile.addEventListener("click", handleProfileEditCloseButtonClick);
 
-popupCloseAdd.addEventListener("click", popupClosedAdd);
+popupCloseAdd.addEventListener("click", handleCardAddCloseButtonClick);
 
-popupCloseImage.addEventListener("click", popupClosedImage);
+popupCloseImage.addEventListener("click", handleImageCloseButtonClick);
 
 formElementProfile.addEventListener('submit', handleFormSubmitProfile);
 

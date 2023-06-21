@@ -118,7 +118,7 @@ function handleFormSubmitProfile(evt) {
   evt.preventDefault();
   firstName.textContent = nameInput.value;
   job.textContent = jobInput.value;
-  popupClosedProfile();
+  handleProfileEditCloseButtonClick();
 };
 
 function handleFormSubmitAdd(evt) {
@@ -128,7 +128,7 @@ function handleFormSubmitAdd(evt) {
     link: imageInput.value
   };
   renderCard(dataCard);
-  popupClosedAdd();
+  handleCardAddCloseButtonClick();
   evt.target.reset()
 };
 

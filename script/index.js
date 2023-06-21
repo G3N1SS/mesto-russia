@@ -52,8 +52,8 @@ const initialCards = [
     name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
-]; 
-const createCard = ({name,link}) => {
+];
+const createCard = ({ name, link }) => {
   const newCard = cardTemplate.querySelector(".elements__cards").cloneNode(true);
   const cardImage = newCard.querySelector('.elements__image');
   const cardDelete = newCard.querySelector(".elements__delete-button");
@@ -64,7 +64,7 @@ const createCard = ({name,link}) => {
   cardImage.alt = name;
   cardName.textContent = name;
 
-  cardDelete.addEventListener("click", function(){
+  cardDelete.addEventListener("click", function () {
     newCard.remove();
   });
 
@@ -72,7 +72,7 @@ const createCard = ({name,link}) => {
     cardLike.classList.toggle("elements__like-button_active");
   });
 
-  cardImage.addEventListener("click", function() {
+  cardImage.addEventListener("click", function () {
     popupImage.src = link;
     popupImage.alt = name;
     popupCaption.textContent = name;
@@ -84,13 +84,13 @@ const createCard = ({name,link}) => {
 
 //функции
 
-function popupProfileOpen(){
+function popupProfileOpen() {
   openPopup(popupProfile);
   nameInput.value = firstName.textContent;
   jobInput.value = job.textContent;
 };
 
-function popupAddOpen(){
+function popupAddOpen() {
   openPopup(popupAdd);
 };
 
@@ -102,15 +102,15 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 };
 
-function popupClosedProfile(){
+function popupClosedProfile() {
   closePopup(popupProfile);
 }
 
-function popupClosedAdd(){
+function popupClosedAdd() {
   closePopup(popupAdd);
 };
 
-function popupClosedImage(){
+function popupClosedImage() {
   closePopup(popupImages);
 };
 
@@ -143,7 +143,7 @@ function render() {
   initialCards.forEach(renderCard);
 };
 
-function renderCard(data) { 
+function renderCard(data) {
   const placeElement = createCard(data);
   placesContainer.prepend(placeElement);
 };

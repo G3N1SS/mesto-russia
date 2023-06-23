@@ -132,13 +132,6 @@ function handleFormSubmitAdd(evt) {
   evt.target.reset()
 };
 
-function handleFormSubmitCard(evt) {
-  evt.preventDefault();
-  placeName.textContent = placeInput.value;
-  image.src = imageInput.value;
-  popupClosedAdd();
-};
-
 function render() {
   initialCards.forEach(renderCard);
 };

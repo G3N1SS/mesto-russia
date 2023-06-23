@@ -137,8 +137,7 @@ function render() {
 };
 
 function renderCard(data) {
-  const placeElement = createCard(data);
-  placesContainer.prepend(placeElement);
+  placesContainer.prepend(createCard(data));
 };
 
 //слушатели/обработчики

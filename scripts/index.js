@@ -100,14 +100,10 @@ function handleProfileEditButtonClick() {
   openPopup(popupProfile);
   nameInput.value = firstName.textContent;
   jobInput.value = job.textContent;
-  popupProfileEdit.disabled = false;
-  popupProfileEdit.classList.remove("popup__save_invalid")
 };
 
 function handleCardAddButtonClick() {
   openPopup(popupAdd);
-  popupAddSave.disabled = "disabled";
-  popupAddSave.classList.add("popup__save_invalid");
 };
 
 function openPopup(popup) {
@@ -124,7 +120,7 @@ function handleFormSubmitProfile(evt) {
   evt.preventDefault();
   firstName.textContent = nameInput.value;
   job.textContent = jobInput.value;
-  handleProfileEditCloseButtonClick();
+  closePopup(popupProfile);
 };
 
 function handleFormSubmitAdd(evt) {
@@ -134,8 +130,10 @@ function handleFormSubmitAdd(evt) {
     link: imageInput.value
   };
   renderCard(dataCard);
-  handleCardAddCloseButtonClick();
+  closePopup(popupAdd);
   evt.target.reset();
+  popupAddSave.disabled = "disabled";
+  popupAddSave.classList.add("popup__save_invalid");
 };
 
 function render() {

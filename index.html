@@ -40,10 +40,12 @@
       <div class="popup__box">
         <button class="popup__close popup__close_profile" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form popup__form_profile" name="popup">
-          <input class="popup__input popup__input_type_name" type="text" name="inputName">
-          <input class="popup__input popup__input_type_job" type="text" name="inputJob">
-          <button class="popup__save" type="submit">Сохранить</button>
+        <form class="popup__form popup__form_profile" name="popupProfile">
+          <input class="popup__input popup__input_type_name" type="text" name="inputName" required minlength="2" maxlength="40">
+          <span id="inputName-error" class="error"></span>
+          <input class="popup__input popup__input_type_job" type="text" name="inputJob" required minlength="2" maxlength="200">
+          <span id="inputJob-error" class="error"></span>
+          <button class="popup__save popupProfileEdit" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
@@ -51,12 +53,14 @@
       <div class="popup__box">
         <button class="popup__close popup__close_add" type="button"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form popup__form_add" name="popup">
+        <form class="popup__form popup__form_add" name="popupAdd">
           <input class="popup__input popup__input_type_place" type="text" name="inputPlace" placeholder="Название"
-            required>
-          <input class="popup__input popup__input_type_image" type="text" name="inputImage"
-            placeholder="Ссылка на картинку" required>
-          <button class="popup__save" type="submit">Сохранить</button>
+            required minlength="2">
+          <span id="inputPlace-error" class="error"></span>
+          <input class="popup__input popup__input_type_image" name="inputImage"
+            placeholder="Ссылка на картинку" required minlength="2" type="url">
+          <span id="inputImage-error" class="error"></span>
+          <button class="popup__save popupAddSave" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
@@ -80,7 +84,8 @@
       </div>
     </article>
   </template>
-  <script defer src="./script/index.js"></script>
+  <script defer src="./scripts/validation.js"></script>
+  <script defer src="./scripts/index.js"></script>
 </body>
 
 </html>
